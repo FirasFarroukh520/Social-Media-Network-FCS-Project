@@ -16,9 +16,10 @@ def bfs(graph, start_user_id):
 
     return visited
 
+# Depth-First Search (DFS) algorithm
 def dfs(graph, start_user_id):
     visited = set()
-    stack = [start_user_id]
+    stack = [start_user_id]  # Stack for DFS
 
     while stack:
         user_id = stack.pop()
