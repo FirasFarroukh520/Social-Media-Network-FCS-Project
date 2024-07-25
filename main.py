@@ -27,7 +27,9 @@ class Graph:
             self.adjacency_list[user] = []
         self.adjacency_list[user].append(friend)
  
-# Create a sample graph and visualize it
+
+
+# Create a sample graph and visualize it and test it 
 sample_graph = Graph()
 sample_graph.add_edge('FIras', 'ali')
 sample_graph.add_edge('FIras', 'Mahdi')
