@@ -4,8 +4,8 @@ from collections import deque
 
 # Breadth-First Search (BFS) Algorithm 
 def bfs(graph, start_user_id):
-    visited = set()
-    queue = deque([start_user_id])
+    visited = set() # Set to keep track of visited nodes
+    queue = deque([start_user_id]) # Queue For BFS
 
     while queue:
         user_id = queue.popleft()
