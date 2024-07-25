@@ -7,7 +7,8 @@ class Graph:
         if user.user_id not in self.adjacency_list:
             self.adjacency_list[user.user_id] = []
 
-    # Add method to remove users from the network
+
+        # Add method to remove users from the network
     def remove_user(self, user):
         if user.user_id in self.adjacency_list:
             del self.adjacency_list[user.user_id]
