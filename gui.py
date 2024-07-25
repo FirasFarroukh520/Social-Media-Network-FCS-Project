@@ -35,7 +35,8 @@ class App:
             user = User(user_id, name)
             self.graph.add_user(user)
             self.users_listbox.insert(tk.END, f"User ID: {user_id}, Name: {name}")
-            self.user_id_entry.delete(0, tk.END)  # Clear the entry after adding
+            # Clear the entry after adding
+            self.user_id_entry.delete(0, tk.END)  
             self.name_entry.delete(0, tk.END)  # Clear the entry after adding
         else:
             tk.messagebox.showwarning("Input Error", "Please enter both User ID and Name")  # Show warning if fields are empty
