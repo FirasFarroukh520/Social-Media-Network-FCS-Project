@@ -1,7 +1,7 @@
 class Graph:
     def __init__(self):
         self.adjacency_list = {}
-
+    
     # Add method to add users in the graph class 
     def add_user(self, user): 
         if user.user_id not in self.adjacency_list:
