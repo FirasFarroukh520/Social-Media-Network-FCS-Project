@@ -1,3 +1,4 @@
+Social Media Network FCS Project
 This project implements a simple social network using Python and the NetworkX library. It includes functionalities for adding users, creating relationships, calculating centrality measures, and visualizing the social network graph.
 
 Features: 
