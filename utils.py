@@ -64,13 +64,13 @@ def connected_components(graph):
 
     return components
 
-
+# Merge sort algorithm to sort users based on a key
 def merge_sort(users, key=lambda user: user.name):
     if len(users) <= 1:
         return users
     mid = len(users) // 2
-    left = merge_sort(users[:mid], key)
-    right = merge_sort(users[mid:], key)
+    left = merge_sort(users[:mid], key)  # Sort the left half
+    right = merge_sort(users[mid:], key)  # Sort the right half
 
     return merge(left, right, key)
 
