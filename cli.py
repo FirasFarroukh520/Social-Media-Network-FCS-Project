@@ -1,6 +1,8 @@
 from graph import Graph
 from user import User
 # Add functionality to create users and relationships
+# Add functionality to create a graph
+
 def display_menu():
     print("1. Add User")
     print("2. Remove User")
