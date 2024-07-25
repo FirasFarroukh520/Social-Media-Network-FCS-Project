@@ -1,4 +1,3 @@
-# utils.py
 
 from collections import deque
 
@@ -28,7 +27,6 @@ def dfs(graph, start_user_id):
             stack.extend(set(graph.adjacency_list[user_id]) - visited)
 
     return visited
-# utils.py
 
 import heapq
 
@@ -52,21 +50,20 @@ def dijkstra(graph, start_user_id, end_user_id):
 
     return distances[end_user_id]
 
-# utils.py
 
+#Find all connected components in the graph
 def connected_components(graph):
-    visited = set()
-    components = []
+    visited = set() # Set to keep track of visited nodes
+    components = [] # List to store all connected components
 
     for user_id in graph.adjacency_list:
         if user_id not in visited:
             component = bfs(graph, user_id)
             components.append(component)
-            visited.update(component)
+            visited.update(component)  # Mark all nodes in this component as visited
 
     return components
 
-# utils.py
 
 def merge_sort(users, key=lambda user: user.name):
     if len(users) <= 1:
@@ -92,7 +89,6 @@ def merge(left, right, key):
     return sorted_list
 
 
-# utils.py
 
 def binary_search(users, target, key=lambda user: user.user_id):
     left, right = 0, len(users) - 1
@@ -107,7 +103,6 @@ def binary_search(users, target, key=lambda user: user.user_id):
     return None
 
 
-# utils.py
 
 def average_friends(graph):
     total_friends = sum(len(friends) for friends in graph.adjacency_list.values())
@@ -118,8 +113,6 @@ def network_density(graph):
     total_relationships = sum(len(friends) for friends in graph.adjacency_list.values()) / 2
     return total_relationships / (total_users * (total_users - 1) / 2)
 
-
-# utils.py
 
 def recommend_friends(graph, user):
     recommendations = set()
