@@ -32,13 +32,14 @@ def dfs(graph, start_user_id):
 
 import heapq
 
+# Dijkstra's algorithm to find the shortest path
 def dijkstra(graph, start_user_id, end_user_id):
     distances = {user_id: float('infinity') for user_id in graph.adjacency_list}
-    distances[start_user_id] = 0
-    priority_queue = [(0, start_user_id)]
+    distances[start_user_id] = 0 # Distance to the start node is 0
+    priority_queue = [(0, start_user_id)] # Priority queue to process nodes
 
     while priority_queue:
-        current_distance, current_user_id = heapq.heappop(priority_queue)
+        current_distance, current_user_id = heapq.heappop(priority_queue) # Get the node with the smallest distance
 
         if current_distance > distances[current_user_id]:
             continue
