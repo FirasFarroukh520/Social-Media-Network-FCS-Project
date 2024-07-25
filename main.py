@@ -1,6 +1,6 @@
 # main.py
- 
-import networkx as nx # imported the networkx as nx library
+ # imported the networkx as nx library
+import networkx as nx 
 import matplotlib.pyplot as plt # imported the matplotlib as plt library
 # Implement graph visualization using Matplotlib 
  
