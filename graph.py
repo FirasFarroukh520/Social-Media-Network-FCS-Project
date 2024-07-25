@@ -24,6 +24,7 @@ class Graph:
             self.adjacency_list[user2.user_id].append(user1.user_id)
 
     # Implement method to remove relationships between users
+
     def remove_relationship(self, user1, user2):
         if user1.user_id in self.adjacency_list and user2.user_id in self.adjacency_list:
             self.adjacency_list[user1.user_id].remove(user2.user_id)
