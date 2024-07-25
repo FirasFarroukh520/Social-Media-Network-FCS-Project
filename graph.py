@@ -16,7 +16,8 @@ class Graph:
                 if user.user_id in user_list:
                     user_list.remove(user.user_id)
 
-    # Implement method to add relationships between users
+
+    # Implement method to add relationships between user
     def add_relationship(self, user1, user2):
         if user1.user_id in self.adjacency_list and user2.user_id in self.adjacency_list:
             self.adjacency_list[user1.user_id].append(user2.user_id)
