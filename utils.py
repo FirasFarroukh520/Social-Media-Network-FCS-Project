@@ -89,7 +89,7 @@ def merge(left, right, key):
     return sorted_list
 
 
-
+# Binary search algorithm to find a user based on a key
 def binary_search(users, target, key=lambda user: user.user_id):
     left, right = 0, len(users) - 1
     while left <= right:
@@ -103,17 +103,18 @@ def binary_search(users, target, key=lambda user: user.user_id):
     return None
 
 
-
+# Calculate the average number of friends per user in the graph
 def average_friends(graph):
     total_friends = sum(len(friends) for friends in graph.adjacency_list.values())
     return total_friends / len(graph.adjacency_list)
 
+# Calculate the network density
 def network_density(graph):
     total_users = len(graph.adjacency_list)
     total_relationships = sum(len(friends) for friends in graph.adjacency_list.values()) / 2
     return total_relationships / (total_users * (total_users - 1) / 2)
 
-
+# Recommend friends for a user based on their friends' friends
 def recommend_friends(graph, user):
     recommendations = set()
     for friend in graph.adjacency_list[user.user_id]:
