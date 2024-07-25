@@ -37,7 +37,8 @@ class App:
             self.users_listbox.insert(tk.END, f"User ID: {user_id}, Name: {name}")
             # Clear the entry after adding
             self.user_id_entry.delete(0, tk.END)  
-            self.name_entry.delete(0, tk.END)  # Clear the entry after adding
+            # Clear the entry after adding
+            self.name_entry.delete(0, tk.END)  
         else:
             tk.messagebox.showwarning("Input Error", "Please enter both User ID and Name")  # Show warning if fields are empty
  
