@@ -30,7 +30,8 @@ class App:
     def add_user(self):
         user_id = self.user_id_entry.get()
         name = self.name_entry.get()
-        if user_id and name:  # Check if both fields are filled
+         # Check if both fields are filled
+        if user_id and name: 
             user = User(user_id, name)
             self.graph.add_user(user)
             self.users_listbox.insert(tk.END, f"User ID: {user_id}, Name: {name}")
