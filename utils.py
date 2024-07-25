@@ -8,9 +8,10 @@ def bfs(graph, start_user_id):
     queue = deque([start_user_id]) # Queue For BFS
 
     while queue:
-        user_id = queue.popleft()
+        user_id = queue.popleft() # Dequeue a vertex from the queue
         if user_id not in visited:
             visited.add(user_id)
+               # Add all unvisited neighbors to the queue
             queue.extend(set(graph.adjacency_list[user_id]) - visited)
 
     return visited
