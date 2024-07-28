@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 # Implement graph visualization using Matplotlib 
  
 def visualize_graph(graph):
+    #create an empty graph
     G = nx.Graph()
  
     for user, friends in graph.adjacency_list.items():
